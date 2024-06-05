@@ -55,6 +55,12 @@ export const App = () => {
                     'is-info': good === selectedGood,
                   })}
                   onClick={() => {
+                    if (good === selectedGood) {
+                      goodValue('');
+
+                      return;
+                    }
+
                     goodValue(good);
                   }}
                 >
